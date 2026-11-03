@@ -155,7 +155,7 @@ def show_monthly_revenue_chart(df):
     )
     fig.update_xaxes(dtick="M1", tickformat="%b %Y")
     fig.update_yaxes(tickprefix="$")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 
 def show_revenue_by_product_chart(df):
@@ -176,7 +176,7 @@ def show_revenue_by_product_chart(df):
         labels={"Total_Sales": "Revenue ($)", "Product": ""},
     )
     fig.update_xaxes(tickprefix="$")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 
 def get_latest_inventory(df):
@@ -201,7 +201,7 @@ def show_inventory_table(inventory):
     st.dataframe(
         inventory,
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
         column_config={
             "Order_Date": st.column_config.DateColumn("Last recorded", format="YYYY-MM-DD"),
             "Stock_Quantity": "Stock quantity",
@@ -282,7 +282,7 @@ def main():
         if filtered_sales.empty:
             st.write("No sales match the selected filters.")
         else:
-            st.dataframe(filtered_sales, hide_index=True, use_container_width=True)
+            st.dataframe(filtered_sales, hide_index=True, width="stretch")
 
 
 if __name__ == "__main__":
