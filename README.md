@@ -26,6 +26,9 @@ A beginner-friendly analytics dashboard built with Python, Pandas, Streamlit and
 - **Low-stock alerts:** a list of products whose latest stock quantity is below their reorder level.
 - **Filtered sales table:** an expandable "View filtered sales dataset" section showing the rows that match the current filters.
 - **Friendly messages:** if the data file is missing, empty, missing required columns or has invalid dates, the app shows a clear error. If no sales match the filters, it shows zero metrics and a message instead of empty charts.
+## Live demo
+
+[Open the dashboard](https://sales-inventory-dashboard-nzsnw8izhxvca87fcbnhmg.streamlit.app/)
 
 ## Dashboard preview
 
